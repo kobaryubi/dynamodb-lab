@@ -8,3 +8,8 @@ services:
     volumes:
       - ./dynamodb:/home/dynamodblocal/data
     working_dir: /home/dynamodblocal
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    tty: true
