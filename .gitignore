@@ -1,2 +1,4 @@
 dynamodb/*
 !dynamodb/.gitkeep
+
+/target

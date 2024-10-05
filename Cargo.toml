@@ -1,0 +1,4 @@
+[package]
+name = "dynamodb_lab"
+
+[dependencies]
