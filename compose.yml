@@ -1,0 +1,10 @@
+services:
+  dynamodb:
+    command: "-jar DynamoDBLocal.jar -disableTelemetry -sharedDb -dbPath ./data"
+    image: amazon/dynamodb-local
+    container_name: dynamodb
+    ports:
+      - 8100:8000
+    volumes:
+      - ./dynamodb:/home/dynamodblocal/data
+    working_dir: /home/dynamodblocal
