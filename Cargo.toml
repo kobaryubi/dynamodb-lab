@@ -1,5 +1,6 @@
 [package]
 name = "dynamodb_lab"
+edition = "2021"
 
 [dependencies]
 aws-config = "1.5.7"
