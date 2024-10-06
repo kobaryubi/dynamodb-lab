@@ -20,21 +20,21 @@ async fn main() -> Result<(), Error> {
     let config = config::Builder::from(&sdk_config).build();
     let client = Client::from_conf(config);
 
-    let table_name = "Music";
+    let table_name = "music";
     let partition_key = KeySchemaElement::builder()
-        .attribute_name("Artist")
+        .attribute_name("artist")
         .key_type(KeyType::Hash)
         .build()?;
     let sort_key = KeySchemaElement::builder()
-        .attribute_name("SongTitle")
+        .attribute_name("song_title")
         .key_type(KeyType::Range)
         .build()?;
     let artist_attribute = AttributeDefinition::builder()
-        .attribute_name("Artist")
+        .attribute_name("artist")
         .attribute_type(ScalarAttributeType::S)
         .build()?;
     let song_title_attribute = AttributeDefinition::builder()
-        .attribute_name("SongTitle")
+        .attribute_name("song_title")
         .attribute_type(ScalarAttributeType::S)
         .build()?;
     let provisioned_throughput = ProvisionedThroughput::builder()
